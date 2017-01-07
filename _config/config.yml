@@ -1,4 +1,0 @@
-Injector:
-  EventEmitter:
-    properties:
-      mediator: '%$EventMediator'
