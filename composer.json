@@ -1,17 +1,21 @@
 {
-	"name": "fspringveldt/silverstripe-event-mediator",
-	"description": "A Silverstripe event emitter based on the mediator pattern",
-	"type": "silverstripe-module",
-	"keywords": ["silverstripe", "event emitter"],
-	"authors": [
-	{
-		"name": "Franco Springveldt",
-		"email": "fspringveldt@gmail.com"
-	}
-	],
-	"require":
-	{
-		"silverstripe/framework": "3.*"
-	},
-	"license": "BSD-3-Clause"
+  "name": "fspringveldt/silverstripe-event-mediator",
+  "description": "A Silverstripe event emitter based on the mediator pattern",
+  "type": "silverstripe-module",
+  "keywords": [
+    "silverstripe",
+    "event mediator",
+    "events",
+    "aspects"
+  ],
+  "authors": [
+    {
+      "name": "Franco Springveldt",
+      "email": "fspringveldt@gmail.com"
+    }
+  ],
+  "require": {
+    "silverstripe/framework": "3.*"
+  },
+  "license": "BSD-3-Clause"
 }
