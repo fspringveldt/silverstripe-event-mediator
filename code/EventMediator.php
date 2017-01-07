@@ -43,7 +43,7 @@
 					[
 						$observer,
 						$obj['method'],
-					], $data
+					], [$data]
 				);
 
 			}
