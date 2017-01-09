@@ -1,12 +1,14 @@
 <?php
 
-
-	/**
-	 * Created by PhpStorm.
-	 * User: francospringveldt
-	 * Date: 2016/12/31
-	 * Time: 10:01 PM
-	 */
+	namespace eventMediator;
+		/**
+		 * Created by PhpStorm.
+		 * User: francospringveldt
+		 * Date: 2016/12/31
+		 * Time: 10:01 PM
+		 */
+	use AfterCallAspect;
+	use Injector;
 
 	/**
 	 * Class EventMediator
@@ -38,7 +40,6 @@
 			{
 				$observer = Injector::inst()
 									->create($obj['class']);
-				//				$result = $observer->{$obj['method']}($data);
 				call_user_func_array(
 					[
 						$observer,

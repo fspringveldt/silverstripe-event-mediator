@@ -1,5 +1,10 @@
 <?php
 
+	namespace eventMediator;
+	use Exception;
+	use Extension;
+	use Injector;
+
 	/**
 	 * Class EventExtension
 	 * @package
@@ -20,7 +25,7 @@
 			if(!$this->mediator)
 			{
 				$this->mediator = Injector::inst()
-										  ->get('EventMediator');
+										  ->get('eventMediator\EventMediator');
 			}
 
 			return $this->mediator;
@@ -36,6 +41,7 @@
 		{
 			$this->getMediator()
 				 ->trigger($eventName, $data);
+
 			return true;
 
 		}

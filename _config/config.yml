@@ -6,4 +6,4 @@ After:
 
 DataObject:
   extensions:
-    - 'EventExtension'
+    - 'eventMediator\EventExtension'
