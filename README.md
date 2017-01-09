@@ -15,12 +15,12 @@ To install, run below from root of SilverStripe installation:
 http://**your-site-url**?flush=1 once composer is complete the flush the manifest.
 
 ##Configuration 1 - Extension based (default)
-Installing the module adds the ```EventExtension``` to DataObject. 
+Installing the module adds the ```eventMediator\EventExtension``` to DataObject. 
 Let's say after each call to ```$A->foo()``` you'd like to fire off a call to ```$B->bar()```, the following added to your composer.yml sets up the events:
 
 ```yaml
 Injector:
-  EventMediator:
+  eventMediator\EventMediator':
     properties:
       events:
         foo:
@@ -45,7 +45,7 @@ class A{
 Let's say after each call to ```$A->foo()``` you'd like to fire off a call to ```$B->bar()```, the following in your composer.yml should do the trick:
 ```yaml
 Injector:
-  EventMediator:
+  'eventMediator\EventMediator':
     properties:
       events:
         foo:
@@ -60,6 +60,6 @@ Injector:
       proxied: %$ProxiedA
       afterCall:
         foo:
-          - %$EventMediator
+          - %$eventMediator\EventMediator'
 ```
 All parameters from ```$A->foo()``` are sent through ```$B->foo()``` for your perusal.  
