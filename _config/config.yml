@@ -1,0 +1,9 @@
+---
+Name: eventmediatorconfig
+After:
+  - '#mysiteconfig'
+---
+
+DataObject:
+  extensions:
+    - 'EventExtension'

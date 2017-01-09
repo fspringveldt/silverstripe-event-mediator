@@ -32,20 +32,19 @@
 		 * @param      $eventName
 		 * @param null $data
 		 */
-		public function trigger($eventName, $data = NULL)
+		public function trigger($eventName, &$data = NULL)
 		{
 			foreach($this->events[$eventName] as $name => $obj)
 			{
-
 				$observer = Injector::inst()
 									->create($obj['class']);
+				//				$result = $observer->{$obj['method']}($data);
 				call_user_func_array(
 					[
 						$observer,
 						$obj['method'],
 					], [$data]
 				);
-
 			}
 		}
 
